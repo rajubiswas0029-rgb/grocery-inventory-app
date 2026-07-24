@@ -7,13 +7,15 @@ import Dashboard from './pages/Dashboard'
 import AddProduct from './pages/AddProduct'
 import EditProduct from './pages/EditProduct'
 import ProductList from './pages/ProductList'
-
+import Sales from './pages/Sales'
+import SalesHistory from './pages/SalesHistory'
 export default function App() {
   return (
     <InventoryProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
+
           <Route
             path="/"
             element={
@@ -27,7 +29,10 @@ export default function App() {
             <Route path="products" element={<ProductList />} />
             <Route path="add-product" element={<AddProduct />} />
             <Route path="edit-product/:id" element={<EditProduct />} />
+            <Route path="sales" element={<Sales />} />
+            <Route path="sales-history" element={<SalesHistory />} />
           </Route>
+
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>
       </BrowserRouter>

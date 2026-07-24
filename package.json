@@ -4,16 +4,17 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "dev:client": "vite",
-    "dev:server": "node server/index.js",
-    "build": "vite build",
-    "start": "node server/index.js",
-    "lint": "oxlint",
-    "preview": "vite preview"
+  "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+  "dev:client": "vite",
+  "dev:server": "node server/index.js",
+  "build": "vite build",
+  "start": "node server/index.js",
+  "lint": "eslint .",
+  "preview": "vite preview"
+
   },
   "dependencies": {
-    "better-sqlite3": "^11.9.1",
+    "better-sqlite3": "^12.3.0",
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "lucide-react": "^1.25.0",

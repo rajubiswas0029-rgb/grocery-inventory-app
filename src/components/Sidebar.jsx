@@ -5,6 +5,7 @@ import {
   PlusCircle,
   LogOut,
   ShoppingBasket,
+  Receipt,
 } from 'lucide-react'
 import { useInventory } from '../context/InventoryContext'
 
@@ -12,6 +13,8 @@ const navItems = [
   { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { to: '/products', label: 'Product List', icon: Package },
   { to: '/add-product', label: 'Add Product', icon: PlusCircle },
+  { to: '/sales', label: 'Sales / Billing', icon: ShoppingBasket },
+  { to: '/sales-history', label: 'Sales History', icon: Receipt },
 ]
 
 export default function Sidebar() {
@@ -29,6 +32,7 @@ export default function Sidebar() {
         <div className="brand-icon">
           <ShoppingBasket size={22} />
         </div>
+
         <div>
           <h1>GroceryHub</h1>
           <p>Inventory Manager</p>
@@ -50,7 +54,11 @@ export default function Sidebar() {
         ))}
       </nav>
 
-      <button type="button" className="sidebar-logout" onClick={handleLogout}>
+      <button
+        type="button"
+        className="sidebar-logout"
+        onClick={handleLogout}
+      >
         <LogOut size={20} />
         <span>Logout</span>
       </button>

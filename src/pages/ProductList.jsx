@@ -53,12 +53,14 @@ export default function ProductList() {
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
       const productName = product.name?.toLowerCase() || ''
-      const productCategory = product.category?.toLowerCase() || ''
-      const searchText = search.toLowerCase()
+const productCategory = product.category?.toLowerCase() || ''
+const productBarcode = String(product.barcode || '').toLowerCase()
+const searchText = search.toLowerCase().trim()
 
-      const matchesSearch =
-        productName.includes(searchText) ||
-        productCategory.includes(searchText)
+const matchesSearch =
+  productName.includes(searchText) ||
+  productCategory.includes(searchText) ||
+  productBarcode.includes(searchText)
 
       const matchesCategory =
         categoryFilter === 'all' || product.category === categoryFilter
@@ -166,6 +168,7 @@ export default function ProductList() {
             <thead>
               <tr>
                 <th>Product</th>
+                <th>Barcode</th>
                 <th>Category</th>
                 <th>Stock Control</th>
                 <th>Quantity</th>
@@ -197,11 +200,13 @@ export default function ProductList() {
                   <tr key={product.id}>
                     <td className="product-name">{product.name}</td>
 
-                    <td>
-                      <span className="badge badge-neutral">
-                        {product.category}
-                      </span>
-                    </td>
+                    <td>{product.barcode || '—'}</td>
+
+<td>
+  <span className="badge badge-neutral">
+    {product.category}
+  </span>
+</td>
 
                     <td>
                       <div className="table-actions">

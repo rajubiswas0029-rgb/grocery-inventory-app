@@ -5,7 +5,7 @@ import {
   getAllProducts,
   getProductById,
   updateProduct,
-} from './database.js'
+} from '../database.js'
 
 const router = Router()
 

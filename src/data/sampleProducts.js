@@ -2,6 +2,7 @@ export const sampleProducts = [
   {
     id: '1',
     name: 'Organic Whole Milk',
+    barcode: '890100000001',
     category: 'Dairy',
     quantity: 48,
     minimumStock: 20,
@@ -12,6 +13,7 @@ export const sampleProducts = [
   {
     id: '2',
     name: 'Fresh Bananas',
+    barcode: '890100000002',
     category: 'Produce',
     quantity: 120,
     minimumStock: 50,
@@ -22,6 +24,7 @@ export const sampleProducts = [
   {
     id: '3',
     name: 'Whole Wheat Bread',
+    barcode: '890100000003',
     category: 'Bakery',
     quantity: 8,
     minimumStock: 15,
@@ -32,6 +35,7 @@ export const sampleProducts = [
   {
     id: '4',
     name: 'Extra Virgin Olive Oil',
+    barcode: '890100000004',
     category: 'Pantry',
     quantity: 32,
     minimumStock: 10,
@@ -42,6 +46,7 @@ export const sampleProducts = [
   {
     id: '5',
     name: 'Free Range Eggs (12 pack)',
+    barcode: '890100000005',
     category: 'Dairy',
     quantity: 14,
     minimumStock: 24,
@@ -52,6 +57,7 @@ export const sampleProducts = [
   {
     id: '6',
     name: 'Atlantic Salmon Fillet',
+    barcode: '890100000006',
     category: 'Seafood',
     quantity: 6,
     minimumStock: 8,
@@ -62,6 +68,7 @@ export const sampleProducts = [
   {
     id: '7',
     name: 'Basmati Rice (5kg)',
+    barcode: '890100000007',
     category: 'Pantry',
     quantity: 45,
     minimumStock: 12,
@@ -72,6 +79,7 @@ export const sampleProducts = [
   {
     id: '8',
     name: 'Fresh Spinach',
+    barcode: '890100000008',
     category: 'Produce',
     quantity: 22,
     minimumStock: 15,
